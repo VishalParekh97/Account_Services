@@ -9,9 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan("com.MyBank")
 @EnableJpaRepositories("com.MyBank")
 @EntityScan("com.MyBank")
 public class AccountServicesApplication {
