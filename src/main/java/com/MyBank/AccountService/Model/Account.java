@@ -42,48 +42,37 @@ public class Account {
 		return account_id;
 	}
 
-
-	public void setAccoount_id(int accoount_id) {
-		this.account_id = accoount_id;
-	}
-    @Column(name = "account_uuid", nullable = false)
+   @Column(name = "account_uuid", nullable = false)
 	public String getAccountuuid() {
 		return account_uuid;
 	}
-	public void setAccountuuid(String accountuuid) {
-		this.account_uuid = accountuuid;
-	}
+
+	
     @Column(name = "sortcode", nullable = false)
 	public int getSortcode() {
 		return sortcode;
-	}
-	public void setSortcode(int sortcode) {
-		this.sortcode = sortcode;
 	}
 	
     @Column(name = "account_number", nullable = false)
 	public int getAccountnumber() {
 		return account_number;
 	}
-	public void setAccountnumber(int accountnumber) {
-		this.account_number = accountnumber;
-	}
+
 	
     @Column(name = "product_code", nullable = false)
 	public int getProductcode() {
 		return product_code;
 	}
-	public void setProductcode(int productcode) {
-		this.product_code = productcode;
-	}
-	
+
     @Column(name = "status", nullable = false)
 	public String getStatus() {
 		return status;
 	}
+    
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
     @Column(name = "account_name", nullable = false)
 	public String getAccountname() {
 		return account_name;
@@ -91,6 +80,7 @@ public class Account {
 	public void setAccountname(String accountname) {
 		this.account_name = accountname;
 	}
+	
     @Column(name = "customer_number", nullable = false)
 	public int getCustomernumber() {
 		return customer_number;

@@ -21,4 +21,11 @@ public class GlobalExceptionHandler {
         ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    
+    @ExceptionHandler(AccountNotFoundException.class)
+    public ResponseEntity<?> AccountNotFoundException(AccountNotFoundException ex, WebRequest req){
+    	ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(), req.getDescription(false)); {
+    		return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+    	}
+    }
 }
