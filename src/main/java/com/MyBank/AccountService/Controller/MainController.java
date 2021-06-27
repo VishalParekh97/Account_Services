@@ -16,21 +16,21 @@ import com.MyBank.AccountService.Model.Account;
 import com.MyBank.AccountService.services.AccountServiceImpl;
 
 @RestController
-@RequestMapping(value = "/api/v1")
+@RequestMapping(value = "/api")
 public class MainController {
 
 	
 	@Autowired
 	private AccountServiceImpl service;
 	
-	@GetMapping(value="/accounts/{id}")
+	@GetMapping(value="/v1/accounts/{id}")
 	public ResponseEntity<Account> GetAccountByCustomerNumber(@PathVariable(value = "id") int account_id) 
 	throws CustomerNotFoundException{
 		
 		return service.GetAccountDetails(account_id);
 	}
 	
-	@PutMapping(value ="/accounts/{id}/changename")
+	@PutMapping(value ="/v1/accounts/{id}/changename")
 	public ResponseEntity<Account> UpdateAccount(@RequestBody String accountname)
 	throws AccountNotFoundException{
 		

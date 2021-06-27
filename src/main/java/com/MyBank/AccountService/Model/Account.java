@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "account")
 public class Account {
@@ -18,7 +20,9 @@ public class Account {
 	private int account_number;
 	private int product_code;
 	private String status;
+	@ApiModelProperty(notes = "Name should be as First name and last name")
 	private String account_name;
+	 @ApiModelProperty(notes = "Customer number should be of 10 digit")
 	private int customer_number;
 	
 	
@@ -82,6 +86,7 @@ public class Account {
 	}
 	
     @Column(name = "customer_number", nullable = false)
+   
 	public int getCustomernumber() {
 		return customer_number;
 	}
