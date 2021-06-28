@@ -31,10 +31,10 @@ public class MainController {
 	}
 	
 	@PutMapping(value ="/v1/accounts/{id}/changename")
-	public ResponseEntity<Account> UpdateAccount(@RequestBody String accountname)
+	public ResponseEntity<Account> UpdateAccount(@PathVariable(value= "id") int account_id, @RequestBody Account accountname)
 	throws AccountNotFoundException{
 		
-		return null;
+		return service.UpdateAccount(account_id, accountname);
 		
 	}
 	
