@@ -1,6 +1,6 @@
 # My Bank: A Microservices Demo Application
 
-I am working on application where I am developing three microservices (Oauth-services, User-services, Account-services). These microservices built using Spring Boot, Spring Boot JPA, Microsoft SQL Server.
+I am working on application where I am developing three microservices (Oauth-services, User-services, Account-services). These microservices built using Spring Boot, Spring Boot JPA, Microsoft SQL Server etc.
 
 ## Account Services: Overview and key features
 
