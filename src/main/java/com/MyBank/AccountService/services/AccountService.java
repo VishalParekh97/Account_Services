@@ -10,5 +10,5 @@ public interface AccountService {
 
 	ResponseEntity<Account> GetAccountDetails(int account_id) throws CustomerNotFoundException;
 	
-	ResponseEntity<Account> UpdateAccount(String  accont_name) throws AccountNotFoundException;
+	ResponseEntity<Account> UpdateAccount(int account_id, Account  accountname) throws AccountNotFoundException;
 }
